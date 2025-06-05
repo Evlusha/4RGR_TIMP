@@ -3,9 +3,9 @@ const express = require('express');
 const router = express.Router();
 const db = require('../config/db');
 const controller = require('../controllers/operatorController');
-const authMiddleware = require('../middlewares/authMiddleware'); // ⬅️ подключение
+const authMiddleware = require('../middlewares/authMiddleware'); //  подключение
 
-// ✅ Получение текущего профиля (по токену)
+// Получение текущего профиля (по токену)
 router.get('/profile', authMiddleware, controller.getCurrentProfile);
 
 // CRUD для операторов
